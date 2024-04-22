@@ -37,6 +37,20 @@
   }
 }
 
-.custom-label {
+.margin-3 {
   margin-top: 3rem;
+}
+
+.margin-5 {
+  margin-top: 5rem;
+}
+
+.first-group {
+  color: red;
+}
+.second-group {
+  color: green;
+}
+.third-group {
+  color: blue;
 }

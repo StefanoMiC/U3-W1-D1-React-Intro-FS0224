@@ -32,19 +32,45 @@
 //   );
 // }
 
-function FormGroup() {
-  return (
-    // questa è la forma abbreviata di un React.Fragment
-    // ci permette di rispettare la regola dei componenti di ritornare un singolo elemento JSX dalla funzione,
-    // SENZA creare nessun elemento aggiuntivo nella pagina!
-    <>
-      <label htmlFor="name" className="custom-label">
-        Nome
-      </label>
+// function FormGroup(propsObj) {
+//   console.log("PROPS", propsObj);
+//   return (
+//     // questa è la forma abbreviata di un React.Fragment
+//     // ci permette di rispettare la regola dei componenti di ritornare un singolo elemento JSX dalla funzione,
+//     // SENZA creare nessun elemento aggiuntivo nella pagina!
+//     <>
+//       <label htmlFor={propsObj.id} className={propsObj.className} style={propsObj.style}>
+//         {propsObj.labelTxt}
+//       </label>
 
-      <input id="name" type="text" placeholder="Inserisci il tuo nome" />
-    </>
-  );
-}
+//       <input id={propsObj.id} type="text" placeholder={propsObj.placeholder} />
+//     </>
+//   );
+// }
+
+// const FormGroup = propsObj => {
+//   console.log("PROPS", propsObj);
+//   return (
+//     // questa è la forma abbreviata di un React.Fragment
+//     // ci permette di rispettare la regola dei componenti di ritornare un singolo elemento JSX dalla funzione,
+//     // SENZA creare nessun elemento aggiuntivo nella pagina!
+//     <>
+//       <label htmlFor={propsObj.id} className={propsObj.className} style={propsObj.style}>
+//         {propsObj.labelTxt}
+//       </label>
+
+//       <input id={propsObj.id} type="text" placeholder={propsObj.placeholder} />
+//     </>
+//   );
+// };
+
+const FormGroup = propsObj => (
+  <>
+    <label htmlFor={propsObj.id} className={propsObj.className} style={propsObj.style}>
+      {propsObj.labelTxt}
+    </label>
+    <input id={propsObj.id} type="text" placeholder={propsObj.placeholder} />
+  </>
+);
 
 export default FormGroup;
